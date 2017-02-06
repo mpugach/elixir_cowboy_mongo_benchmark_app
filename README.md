@@ -1,8 +1,12 @@
 # PerfExample
 
 ```bash
-MIX_ENV=prod mix compile
-MONGO_DB="my_db" MONGO_COLLECTION="my_collection" elixir --sname node1 --cookie secret_token -pa _build/prod/consolidated -S mix run --no-halt
+export ERL_COMPILER_OPTIONS="[native,{hipe, [o3]}]" MIX_ENV="prod" MONGO_DB="my_db" MONGO_COLLECTION="my_collection"
+
+mix deps.compile cowboy poison poolboy mongodb
+mix compile
+
+elixir --sname node1 --cookie secret_token -pa _build/prod/consolidated -S mix run --no-halt
 
 # You may want to tune Handler.Mongo#serialize_element
 
