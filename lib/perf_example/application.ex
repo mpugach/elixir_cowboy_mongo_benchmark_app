@@ -12,8 +12,11 @@ defmodule PerfExample.Application do
     children = [
       # Starts a worker by calling: PerfExample.Worker.start_link(arg1, arg2, arg3)
       # worker(PerfExample.Worker, [arg1, arg2, arg3]),
-      worker(Mongo, [[name: :mongo, database: Application.get_env(:perf_example, :db), pool: DBConnection.Poolboy]]),
       worker(PerfExample.CowboyWorker, [], function: :run),
+      worker(
+        Mongo,
+        [[name: :mongo, database: Application.get_env(:perf_example, :db), pool: DBConnection.Poolboy, pool_size: 20]]
+      ),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
