@@ -5,7 +5,7 @@ You may want to tune `Handler.Mongo#serialize_element`
 ```bash
 export ERL_COMPILER_OPTIONS="[native,{hipe, [o3]}]" MIX_ENV="prod" MONGO_DB="my_db" MONGO_COLLECTION="my_collection"
 
-mix deps.compile cowboy poison poolboy mongodb
+mix deps.compile cowboy poolboy mongodb jiffy
 mix compile
 
 elixir --sname node1 --cookie secret_token -pa _build/prod/consolidated --no-halt -S mix run
