@@ -6,12 +6,9 @@ defmodule Handler.Mongo do
   end
 
   def body do
-    {:ok, json} =
-      cursor()
-      |> Enum.map(&serialize_element/1)
-      |> Poison.encode
-
-    json
+    cursor()
+    |> Enum.map(&serialize_element/1)
+    |> :jiffy.encode
   end
 
   def serialize_element(element) do

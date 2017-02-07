@@ -4,7 +4,7 @@
   "cowlib": {:git, "https://github.com/ninenines/cowlib", "0e7abe0b24593f131add272c275406d8ed231805", [ref: "master"]},
   "credo": {:hex, :credo, "0.6.1", "a941e2591bd2bd2055dc92b810c174650b40b8290459c89a835af9d59ac4a5f8", [:mix], [{:bunt, "~> 0.2.0", [hex: :bunt, optional: false]}]},
   "db_connection": {:hex, :db_connection, "1.1.0", "b2b88db6d7d12f99997b584d09fad98e560b817a20dab6a526830e339f54cdb3", [:mix], [{:connection, "~> 1.0.2", [hex: :connection, optional: false]}, {:poolboy, "~> 1.5", [hex: :poolboy, optional: true]}, {:sbroker, "~> 1.0", [hex: :sbroker, optional: true]}]},
+  "jiffy": {:git, "https://github.com/davisp/jiffy.git", "06aaf440e091c9fd5f8aea557ac760a33bd37130", [tag: "0.14.11"]},
   "mongodb": {:git, "https://github.com/ericmj/mongodb.git", "af98466040e368f4e7bd7da4f29f52641ddf30ac", []},
-  "poison": {:hex, :poison, "3.0.0", "625ebd64d33ae2e65201c2c14d6c85c27cc8b68f2d0dd37828fde9c6920dd131", [:mix], []},
   "poolboy": {:hex, :poolboy, "1.5.1", "6b46163901cfd0a1b43d692657ed9d7e599853b3b21b95ae5ae0a777cf9b6ca8", [:rebar], []},
   "ranch": {:git, "https://github.com/ninenines/ranch", "40809cd2b257a8a53bcb5588ecaa88cc5381ff5c", [ref: "1.3.0"]}}

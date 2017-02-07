@@ -18,7 +18,6 @@ defmodule PerfExample.Mixfile do
         :ranch,
         :logger,
         :cowboy,
-        :poison,
         :mongodb,
         :poolboy,
       ],
@@ -29,10 +28,10 @@ defmodule PerfExample.Mixfile do
   defp deps do
     [
       {:cowboy, github: "ninenines/cowboy", tag: "2.0.0-pre.6"},
-      {:poison, "3.0.0"},
+      {:credo, "~> 0.5", only: [:dev, :test]},
+      {:jiffy, github: "davisp/jiffy", tag: "0.14.11"},
       {:mongodb, github: "ericmj/mongodb"},
       {:poolboy, "1.5.1"},
-      {:credo, "~> 0.5", only: [:dev, :test]},
     ]
   end
 end
